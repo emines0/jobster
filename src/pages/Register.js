@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Logo } from '../components'
 import Wrapper from '../assets/wrappers/RegisterPage'
-import FormRow from '../components/FormRow'
+import { FormRow } from '../components/'
 import { toast } from 'react-toastify'
 import { useDispatch, useSelector } from 'react-redux'
 import { loginUser, registerUser } from '../features/user/userSlice'
