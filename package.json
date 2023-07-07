@@ -1,5 +1,6 @@
 {
   "name": "jobster",
+  "homepage": "https://jobster-emines0.netlify.app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
