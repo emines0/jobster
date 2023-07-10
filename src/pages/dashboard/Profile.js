@@ -61,7 +61,12 @@ const Profile = () => {
             value={userData.location}
             handleChange={handleChange}
           />
-          <button type='submit' className='btn btn-block' disabled={isLoading}>
+          <button
+            type='submit'
+            className='btn btn-block'
+            onClick={handleSubmit}
+            disabled={isLoading}
+          >
             {isLoading ? 'Please Wait ...' : 'Save Changes'}
           </button>
         </div>

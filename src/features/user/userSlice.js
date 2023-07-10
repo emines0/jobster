@@ -14,6 +14,7 @@ const initialState = {
   user: getUserFromLocalStorage(),
 }
 
+//Register user
 export const registerUser = createAsyncThunk(
   'user/registerUser',
   async (user, thunkAPI) => {
@@ -26,6 +27,7 @@ export const registerUser = createAsyncThunk(
   }
 )
 
+//Login user
 export const loginUser = createAsyncThunk(
   'user/loginUser',
   async (user, thunkAPI) => {
@@ -38,6 +40,7 @@ export const loginUser = createAsyncThunk(
   }
 )
 
+//Update user
 export const updateUser = createAsyncThunk(
   'user/updateUser',
   async (user, thunkAPI) => {
@@ -68,6 +71,7 @@ const userSlice = createSlice({
     },
   },
   extraReducers: {
+    //Register user
     [registerUser.pending]: (state) => {
       state.isLoading = true
     },
@@ -82,6 +86,7 @@ const userSlice = createSlice({
       state.isLoading = false
       toast.error(payload)
     },
+    //Login user
     [loginUser.pending]: (state) => {
       state.isLoading = true
     },
@@ -96,6 +101,7 @@ const userSlice = createSlice({
       state.isLoading = false
       toast.error(payload)
     },
+    //Update user
     [updateUser.pending]: (state) => {
       state.isLoading = true
     },
